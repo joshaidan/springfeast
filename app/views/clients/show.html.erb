@@ -1,0 +1,24 @@
+
+<div>	
+	<h1><%= @client.address %></h1>
+
+	<table>
+		<tr>
+			<td class="field">Address:</td> <td><%= @client.address %></td>
+		</tr>
+		<tr>
+			<td class="field">City:</td> <td><%= @client.city %></td>
+		</tr>
+		<tr>
+			<td class="field">Postal Code:</td> <td><%= @client.postal_code %></td>
+		</tr>
+		<tr>
+			<td class="field">Phone:</td> <td><%= @client.phone %></td>
+		</td>
+		<tr>
+			<td colspan="2" style="text-align: center;"></td>
+		</tr>
+	</table>
+</div>
+
+<div><%= link_to 'Show All Clients', clients_path() %> <%= link_to 'Edit', edit_client_path() %></div>
