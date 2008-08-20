@@ -1,0 +1,22 @@
+
+<h1>Edit Client</h1>
+
+<% form_for(@client) do |f|%>
+<table>
+	<tr>
+		<td class="field">Address:</td> <td><%= f.text_field :address %></td>
+	</tr>
+	<tr>
+		<td class="field">City:</td> <td><%= f.text_field :city %></td>
+	</tr>
+	<tr>
+		<td class="field">Postal Code:</td> <td><%= f.text_field :postal_code %></td>
+	</tr>
+	<tr>
+		<td class="field">Phone:</td> <td><%= f.text_field :phone %></td>
+	</td>
+	<tr>
+		<td colspan="2" style="text-align: center;"><%= f.submit 'Save' %> <%= link_to 'Cancel', clients_path %></td>
+	</tr>
+</table>
+<% end %>
