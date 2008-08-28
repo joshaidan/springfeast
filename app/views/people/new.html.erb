@@ -1,0 +1,50 @@
+
+<h2 style="margin-bottom: 10px;">Add New Person to <%=@client.address%></h2>
+
+<div style="border: 1px solid black; padding: 20px; padding-left: 20px; margin-bottom: 20px; padding-top: 0px; background-color: lightgrey;">	
+	<h2><%= @client.address %></h2>
+	<table>
+		<tr>
+			<td class="field">Address:</td> <td><%= @client.address %></td>
+		</tr>
+		<tr>
+			<td class="field">City:</td> <td><%= @client.city %></td>
+		</tr>
+		<tr>
+			<td class="field">Postal Code:</td> <td><%= @client.postal_code %></td>
+		</tr>
+		<tr>
+			<td class="field">Phone:</td> <td><%= @client.phone %></td>
+		</td>
+		<tr>
+			<td colspan="2" style="text-align: center;"></td>
+		</tr>
+	</table>
+</div>
+
+<div>
+	<h2>Person Details</h2>
+	<% form_for(@client.people.new, :url => client_people_path) do |f| %>
+	<table>
+		<tr>
+			<td>First Name: </td> <td><%= f.text_field :first_name %></td>
+		</tr>
+		<tr>
+			<td>Last Name: </td> <td><%= f.text_field :last_name %></td>
+		</tr>
+		<tr>
+		    <td>Age: </td> <td><%= f.text_field :age %></td>
+		</tr>
+		<tr>
+			<td>Identification: </td> <td><%= f.text_field :identification %></td>
+		</tr>
+		<tr>
+			<td colspan="2"><%= f.submit 'Add Person'%></td>
+		</tr>
+	</table>
+	<% end %>
+</div>
+
+<div>
+	<p><%= link_to 'Back to Client', client_path(@client) %></p>
+</div>
