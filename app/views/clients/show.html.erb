@@ -1,5 +1,5 @@
 
-<div>	
+<div style="border: 1px solid black; padding: 10px; padding-left: 20px; margin-bottom: 20px; background-color: lightgrey;">	
 	<h1><%= @client.address %></h1>
 
 	<table>
@@ -15,10 +15,23 @@
 		<tr>
 			<td class="field">Phone:</td> <td><%= @client.phone %></td>
 		</td>
-		<tr>
-			<td colspan="2" style="text-align: center;"></td>
-		</tr>
 	</table>
+	<p><%= link_to 'Edit', edit_client_path() %></p>
 </div>
 
-<div><%= link_to 'Show All Clients', clients_path() %> <%= link_to 'Edit', edit_client_path() %></div>
+<div>
+	<h1>People</h1>
+	<% for person in @people do %>
+		<table class="person_list">
+		  <tr>
+			<td>First Name: </td> <td><%= person.first_name %></td>
+			<td>Last Name: </td> <td><%= person.last_name %></td>
+			<td>Age: </td><td><%= person.age %></td>
+			<td id="commands">Edit</td><td id="commands">Remove</td>
+		  </tr>	
+		</table>
+	<% end %>
+	<p><%= link_to 'Add New Person', new_client_person_path(@client)%></p>
+</div>
+
+<div><%= link_to 'Show All Clients', clients_path() %></div>

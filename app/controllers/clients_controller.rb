@@ -31,6 +31,7 @@ class ClientsController < ApplicationController
   
   def show
     @client = Client.find(params[:id])
+    @people = @client.people.find(:all)
   end
   
   def create

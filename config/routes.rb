@@ -36,7 +36,9 @@ ActionController::Routing::Routes.draw do |map|
   # See how all your routes lay out with "rake routes"
 
   # Install the default routes as the lowest priority.
-  map.resources :clients
+  map.resources :clients do |clients|
+    clients.resources :people
+  end
   
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
