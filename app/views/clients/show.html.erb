@@ -1,5 +1,5 @@
 
-<div style="border: 1px solid black; padding: 10px; padding-left: 20px; margin-bottom: 20px; background-color: lightgrey;">	
+<div style="border: 1px solid black; padding: 10px; padding-left: 20px; margin-bottom: 20px; background-color: white;">	
 	<h1><%= @client.address %></h1>
 
 	<table>
@@ -19,11 +19,11 @@
 	<p><%= link_to 'Edit', edit_client_path() %></p>
 </div>
 
-<div>
+<div style="border: 1px solid black; padding: 10px; padding-left: 20px; margin-bottom: 20px; background-color: #FFFCE1;">
 	<h1>People</h1>
 	<% for person in @people do %>
-		<table class="person_list">
-		  <tr>
+		<table>
+		  <tr class="person_list">
 			<td>First Name: </td> <td><%= person.first_name %></td>
 			<td>Last Name: </td> <td><%= person.last_name %></td>
 			<td>Age: </td><td><%= person.age %></td>
@@ -31,7 +31,9 @@
 		  </tr>	
 		</table>
 	<% end %>
-	<p><%= link_to 'Add New Person', new_client_person_path(@client)%></p>
+	<div id="add_person">
+    </div>
+	<p id="add_new_person_link"><%= link_to_remote 'Add New Person', :url => new_client_person_path(@client), :method => :get %></p>
 </div>
 
-<div><%= link_to 'Show All Clients', clients_path() %></div>
+<div id="bottom"><%= link_to 'Show All Clients', clients_path() %></div>

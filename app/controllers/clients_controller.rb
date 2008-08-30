@@ -1,6 +1,11 @@
 class ClientsController < ApplicationController
   def index
     @clients = Client.find(:all)
+    @search = Client.new
+  end
+  
+  def find
+    
   end
   
   def edit

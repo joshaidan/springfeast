@@ -1,0 +1,20 @@
+<h2>Person Details</h2>
+<% form_for(@client.people.new, :url => client_people_path) do |f| %>
+<table>
+	<tr>
+		<td>First Name: </td> <td><%= f.text_field :first_name %></td>
+	</tr>
+	<tr>
+		<td>Last Name: </td> <td><%= f.text_field :last_name %></td>
+	</tr>
+	<tr>
+	    <td>Age: </td> <td><%= f.text_field :age %></td>
+	</tr>
+	<tr>
+		<td>Identification: </td> <td><%= f.text_field :identification %></td>
+	</tr>
+	<tr>
+		<td colspan="2"><%= f.submit 'Add Person'%></td>
+	</tr>
+</table>
+<% end %>

@@ -1,4 +1,13 @@
 
+
+* {
+	font-family: 'Lucida Grande';
+}
+
+html {
+	background-color: #B0FFFF;
+}
+
 body {
 	margin-top: 10px;
 }
@@ -11,10 +20,16 @@ body {
 h1 {
 	font-size: 200%;
 	padding-bottom: 10px;
+	font: 2em/1.1 'Lucida Grande', sans-serif;
 }
 
 h2 {
 	font-size: 150%;
+	margin-bottom: 1em;
+}
+
+form {
+	margin-bottom: 1em;
 }
 
 p {
@@ -30,7 +45,7 @@ td {
 }
 
 .col_odd {
-	background: lightgrey;
+	background: #9BE1E1;
 	padding: 10px;
 }
 
@@ -40,20 +55,39 @@ td {
 	padding: 10px;
 }
 
+.whitebox {
+	border: 1px solid black; 
+	padding: 10px; 
+	padding-left: 20px; 
+	margin-top: 20px;
+	margin-bottom: 20px; 
+	background-color: #FFFCE1;
+}
+
 table {
 	margin-top: 15px;
 	margin-bottom: 15px;
 }
 
 .person_list {
-	width: 350px;
+	background-color: #9BE1E1;	
+	width: 200px;
 }
 
-.person_list tr td {
-	background-color: lightgrey;
+.person_list tr {
+	border-color: 1px solid black;
+}
+
+.person_list td {
 	padding: 10px;
+	width: 30px;
 }
 
 #commands {
-	background-color: white;
+	background-color: #FFFCE1;
+}
+
+#hd {
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
