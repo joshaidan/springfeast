@@ -1,0 +1,30 @@
+
+SpringFeast Milestone One
+
+Brian Jones
+August 31, 2007
+
+
+== REGISTRATION
+- Sign in clients who are already registered and enter them into the queue
+- Register new clients, and enter them into the queue.
+
+
+== RECEPTIONIST / RUNNER
+- View the queue
+- Call next client
+- Send client to interviewer and remove from queue
+
+
+== INTERVIEWER
+- Shows list of clients in interviewer queue, interviewer can select client from this queue
+- Display file of client
+- Can input, view, edit and add notes about client, make changes to client file
+- Approve or reject client, send client to food checkout
+
+
+== FOOD CHECKOUT
+-check client in
+-check client out
+-track what food or items the client takes and quantity (this could be for a later milestone, I know of an efficient way to do this)
+-add notes

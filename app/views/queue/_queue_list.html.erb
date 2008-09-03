@@ -1,0 +1,7 @@
+
+<% count = 1 %>
+
+<% for client_queue in @client_queue %>
+  <p><%= count %>. <%=h client_queue.client.address %> </p>
+  <% count += 1 %>
+<% end %>

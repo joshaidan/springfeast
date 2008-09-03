@@ -1,0 +1,25 @@
+
+<table>
+
+<% col = "col_odd"%>
+
+<% for client in @clients %>
+		<tr valign="middle">
+			<td class="<%=col%>">
+			<%= client.address %> 
+		    <%= client.people.find(:first).first_name if client.people.find(:first) %>
+			</td>
+			<td class="<%=col%>">
+			<%= link_to "Show", client_path(client)%>
+			<%= link_to "Edit", edit_client_path(client)%>
+			<%= link_to "Sign In", client_registration_url(:action => :register, :id => client)%>
+			</td>
+	  </td></tr>
+ 	<% if col == "col_odd"
+		 col = "col_even" 
+	   else
+	     col = "col_odd"
+	   end 
+	%>
+<% end %>
+</table>

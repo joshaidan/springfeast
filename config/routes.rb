@@ -34,6 +34,8 @@ ActionController::Routing::Routes.draw do |map|
   # map.root :controller => "welcome"
 
   # See how all your routes lay out with "rake routes"
+  
+  map.client_registration 'registration/:action/:id', :controller => 'registration'
 
   # Install the default routes as the lowest priority.
   map.resources :clients do |clients|

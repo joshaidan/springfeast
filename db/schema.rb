@@ -9,7 +9,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20080819023228) do
+ActiveRecord::Schema.define(:version => 20080903035554) do
+
+  create_table "client_queues", :force => true do |t|
+    t.date     "date"
+    t.integer  "client_id"
+    t.integer  "state",      :default => 1
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "clients", :force => true do |t|
     t.string   "address"
@@ -27,6 +35,20 @@ ActiveRecord::Schema.define(:version => 20080819023228) do
     t.integer  "type"
     t.integer  "age"
     t.string   "identification"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "queue_states", :force => true do |t|
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "queues", :force => true do |t|
+    t.date     "date"
+    t.integer  "client_id"
+    t.integer  "state",      :default => 1
     t.datetime "created_at"
     t.datetime "updated_at"
   end

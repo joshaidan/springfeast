@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  date: 2008-09-02
+  client_id: 1
+  state: 1
+
+two:
+  date: 2008-09-02
+  client_id: 1
+  state: 1
