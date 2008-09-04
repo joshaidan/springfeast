@@ -36,6 +36,11 @@ ActionController::Routing::Routes.draw do |map|
   # See how all your routes lay out with "rake routes"
   
   map.client_registration 'registration/:action/:id', :controller => 'registration'
+  map.receptionist 'receptionist/:action/:id', :controller => 'receptionist'
+  map.interviewer 'interviewer/:action/:id', :controller => 'interviewer'
+  map.check_out 'check_out/:action/:id', :controller => 'check_out'
+  
+  map.resources :queue
 
   # Install the default routes as the lowest priority.
   map.resources :clients do |clients|

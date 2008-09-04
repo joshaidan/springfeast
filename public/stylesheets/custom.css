@@ -91,3 +91,7 @@ table {
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
+
+#hd a {
+	margin-right: 2em;
+}

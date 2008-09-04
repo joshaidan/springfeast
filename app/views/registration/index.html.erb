@@ -1,14 +1,19 @@
 
 <div class="whitebox">
-	<h2>Current Queue</h2>
+
+	<h2>Client Sign-In</h2>
 	
-	<%= render :partial => 'queue/queue_list', :object => @client_queue %>
+	<% form_for(@person, :url => client_registration_path) do |f|%>
+	  <%= text_field_with_auto_complete :person, :real_name %>
+	  <%= f.submit 'Find' %>
+	<% end %>
+
+	<%= render :partial => 'clients/client_list', :object => @clients %>
+	
 </div>
 
 <div class="whitebox">
-
-	<h2>Client Sign-In</h2>
-
-	<%= render :partial => 'clients/client_list', :object => @clients %>
-
+	<h2>Current Queue</h2>
+	
+	<%= render :partial => 'queue/queue_list', :object => @client_queue %>
 </div>

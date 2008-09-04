@@ -5,13 +5,14 @@
    <title>SpringFeast</title>
    	<%= stylesheet_link_tag 'reset-fonts-grids'%>
 	<%= stylesheet_link_tag 'custom'%>
-	<%= javascript_include_tag :defaults %>
+	<%= javascript_include_tag :all %>
 </head>
 <body>
 <div id="doc" class="yui-t7">
-   <div id="hd"><h1><%= link_to 'SpringFeast', clients_path() %></h1></div>
+   <div id="hd"><%= header_menu %></div>
    <div id="bd">
 	<div class="yui-g">
+		<h1><%= link_to 'SpringFeast', clients_path() %></h1>
 	<%= yield %>
 	</div>
 

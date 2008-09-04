@@ -2,6 +2,6 @@
 <% count = 1 %>
 
 <% for client_queue in @client_queue %>
-  <p><%= count %>. <%=h client_queue.client.address %> </p>
+  <p><%= count %>. <%=h client_queue.client.address %> <%= link_to 'Remove', queue_path(client_queue), :method => :delete %> </p>
   <% count += 1 %>
 <% end %>

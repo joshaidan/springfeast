@@ -6,6 +6,9 @@ class QueueController < ApplicationController
   end
 
   def destroy
+    @queue = ClientQueue.find(params[:id])
+    @queue.destroy
+    redirect_to client_registration_path()
   end
 
   def create

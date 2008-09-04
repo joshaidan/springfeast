@@ -1,6 +1,6 @@
 class ClientsController < ApplicationController
   def index
-    @clients = Client.find(:all)
+    @clients = Client.paginate :per_page => 3, :page => params[:page]
     @search = Client.new
   end
   

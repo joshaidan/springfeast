@@ -7,7 +7,13 @@
 		<tr valign="middle">
 			<td class="<%=col%>">
 			<%= client.address %> 
-		    <%= client.people.find(:first).first_name if client.people.find(:first) %>
+			</td>
+			
+			<td class="<%=col%>">
+				<% if client.people.find(:first) %>
+		    		<%= client.people.find(:first).first_name %>
+					<%= client.people.find(:first).last_name %>
+				<% end %>
 			</td>
 			<td class="<%=col%>">
 			<%= link_to "Show", client_path(client)%>
@@ -23,3 +29,6 @@
 	%>
 <% end %>
 </table>
+
+<%= will_paginate @clients %>
+

@@ -1,8 +1,6 @@
 class ClientQueue < ActiveRecord::Base
   belongs_to :client
-
-  def Queue.current_queue
-    self.find_by_date(Date.today)
-  end
+  
+  named_scope :current_queue, lambda { {:conditions => ["date > ?", Date.today]} }
 
 end

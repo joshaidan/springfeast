@@ -8,13 +8,14 @@ August 31, 2007
 == REGISTRATION
 - Sign in clients who are already registered and enter them into the queue
 - Register new clients, and enter them into the queue.
+- Ability to rearrange order of the queue
 
 
 == RECEPTIONIST / RUNNER
 - View the queue
 - Call next client
 - Send client to interviewer and remove from queue
-
+- Ability to rearrange order of the queue
 
 == INTERVIEWER
 - Shows list of clients in interviewer queue, interviewer can select client from this queue
