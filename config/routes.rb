@@ -38,7 +38,7 @@ ActionController::Routing::Routes.draw do |map|
   map.client_registration 'registration/:action/:id', :controller => 'registration'
   map.receptionist 'receptionist/:action/:id', :controller => 'receptionist'
   map.interviewer 'interviewer/:action/:id', :controller => 'interviewer'
-  map.check_out 'check_out/:action/:id', :controller => 'check_out'
+  map.food_checkout 'food_checkout/:action/:id', :controller => 'food_checkout'
   
   map.resources :queue
 

@@ -1,0 +1,23 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+ "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+   <title>SpringFeast</title>
+   	<%= stylesheet_link_tag 'reset-fonts-grids'%>
+	<%= stylesheet_link_tag 'custom'%>
+	<%= javascript_include_tag :all %>
+</head>
+<body>
+<div id="doc" class="yui-t7">
+   <div id="hd"><%= header_menu %></div>
+   <div id="bd">
+	<div class="yui-g">
+		<h1><%= link_to 'SpringFeast', clients_path() %></h1>
+	<%= yield %>
+	</div>
+
+	</div>
+   <div id="ft">Powered By Breeze River Software</div>
+</div>
+</body>
+</html>

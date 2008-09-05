@@ -1,2 +1,5 @@
-<h1>Receptionist#index</h1>
-<p>Find me in app/views/receptionist/index.html.erb</p>
+<div class="whitebox">
+	<h2>Current Queue</h2>
+	
+	<%= render :partial => 'queue/queue_list', :object => @client_queue %>
+</div>

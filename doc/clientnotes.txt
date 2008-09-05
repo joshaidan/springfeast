@@ -16,6 +16,7 @@ August 31, 2007
 - Call next client
 - Send client to interviewer and remove from queue
 - Ability to rearrange order of the queue
+- ~*COOL FEATURE*~ use queueing theory to estimate wait time for each clients (which changes based on the flow of clients through the system)
 
 == INTERVIEWER
 - Shows list of clients in interviewer queue, interviewer can select client from this queue
