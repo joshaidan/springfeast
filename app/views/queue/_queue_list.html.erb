@@ -1,7 +1,21 @@
 
 <% count = 1 %>
 
+<table>
+
 <% for client_queue in @client_queue %>
-  <p><%= count %>. <%=h client_queue.client.address %> <%= link_to 'Remove', queue_path(client_queue), :method => :delete %> </p>
-  <% count += 1 %>
+	<tr>
+  		<td style="width: 150px;"> 
+			<%= count %>. <%=h client_queue.person.first_name %> <%=h client_queue.person.last_name %>
+	 	</td>
+		<td style="width: 150px;">
+			<%= link_to 'Send To Interviewer' %>
+		</td>
+		<td>
+			<%= link_to 'Remove', queue_path(client_queue), :method => :delete, :confirm => "Are you sure you want to remove #{client_queue.person.first_name} #{client_queue.person.last_name}?" %>
+		</td>
+	</tr>
+<% count += 1 %>
 <% end %>
+
+</table>

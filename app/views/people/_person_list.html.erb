@@ -16,7 +16,7 @@
 			<td class="<%=col%>">
 			<%= link_to "Show", client_path(person.client)%>
 			<%= link_to "Edit", edit_client_path(person.client)%>
-			<%= link_to "Sign In", client_registration_url(:action => :register, :id => person.client)%>
+			<%= link_to "Sign In", client_registration_url(:action => :register, :id => person)%>
 			</td>
 	  </td></tr>
  	<% if col == "col_odd"

@@ -1,5 +1,6 @@
 class Person < ActiveRecord::Base
   belongs_to :client
+  has_many :client_queues
   
   def real_name
     first_name = read_attribute(:first_name)
@@ -9,5 +10,10 @@ class Person < ActiveRecord::Base
     else
       ""
     end
+  end
+  
+  def register
+    @queue = self.client_queues.new({:date => Date.today})
+    @queue.save
   end
 end

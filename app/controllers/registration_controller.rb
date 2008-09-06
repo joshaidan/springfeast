@@ -9,9 +9,9 @@ class RegistrationController < ApplicationController
   end
 
   def register
-    @client = Client.find(params[:id])
+    @person = Person.find(params[:id])
     
-    if @client.register
+    if @person.register
       redirect_to :action => :index
     else
       flash[:notice] = "Error trying to register client.  Please contact an administrator."
