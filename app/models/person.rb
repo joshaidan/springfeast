@@ -1,5 +1,5 @@
 class Person < ActiveRecord::Base
-  has_one :client
+  belongs_to :client
   
   def real_name
     first_name = read_attribute(:first_name)

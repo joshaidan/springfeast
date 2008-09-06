@@ -1,0 +1,32 @@
+
+<table>
+
+<% col = "col_odd"%>
+
+<% for person in @people %>
+		<tr valign="middle">
+			<td class="<%=col%>">
+			<%= person.client.address %> 
+			</td>
+			
+			<td class="<%=col%>">
+		    		<%= person.first_name %>
+					<%= person.last_name %>
+			</td>
+			<td class="<%=col%>">
+			<%= link_to "Show", client_path(person.client)%>
+			<%= link_to "Edit", edit_client_path(person.client)%>
+			<%= link_to "Sign In", client_registration_url(:action => :register, :id => person.client)%>
+			</td>
+	  </td></tr>
+ 	<% if col == "col_odd"
+		 col = "col_even" 
+	   else
+	     col = "col_odd"
+	   end 
+	%>
+<% end %>
+</table>
+
+<%= will_paginate @people %>
+

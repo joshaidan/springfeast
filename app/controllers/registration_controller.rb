@@ -5,7 +5,7 @@ class RegistrationController < ApplicationController
   def index
     @client_queue = ClientQueue.find_all_by_date(Date.today)
     @person = Person.new
-    @clients = Client.paginate :per_page => 3, :page => params[:page]
+    @people = Person.paginate :per_page => 10, :page => params[:page]
   end
 
   def register
