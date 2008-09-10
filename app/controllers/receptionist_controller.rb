@@ -6,6 +6,7 @@ class ReceptionistController < ApplicationController
   def send_to_interviewer
     if params[:id]
       @client_queue  = ClientQueue.find(params[:id])
+      @client_queue.send_to_interviewer
     end
     redirect_to receptionist_path()
   end

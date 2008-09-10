@@ -9,7 +9,7 @@
 			<%= count %>. <%=h client_queue.person.first_name %> <%=h client_queue.person.last_name %>
 	 	</td>
 		<td style="width: 150px;">
-			<%= link_to 'Send To Interviewer' %>
+			<%= link_to 'Send To Interviewer', receptionist_path(:id => client_queue, :action => :send_to_interviewer) %>
 		</td>
 		<td>
 			<%= link_to 'Remove', queue_path(client_queue), :method => :delete, :confirm => "Are you sure you want to remove #{client_queue.person.first_name} #{client_queue.person.last_name}?" %>
