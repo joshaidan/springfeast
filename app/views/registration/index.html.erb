@@ -1,14 +1,18 @@
 
 <div class="whitebox">
 
-	<h2>Client Sign-In</h2>
+	<h2>Eligibility Check</h2>
 	
-	<% form_for(@person, :url => client_registration_path) do |f|%>
-	  <%= text_field_with_auto_complete :person, :real_name %>
-	  <%= f.submit 'Find' %>
-	<% end %>
-
-	<%= render :partial => 'people/person_list', :object => @people %>
+	<% form_remote_tag(:url => client_registration_path(:action => :check_eligibility)) do %>
+	  <tr><td>Find: <%= text_field_tag :search_str %> 
+	<%= submit_tag 'Find' %>
+	<% end %>	
+ 
+	<!--  <%= render :partial => 'people/person_list', :object => @people %> -->
+	
+	<div id="results">
+	
+	</div>
 	
 </div>
 
