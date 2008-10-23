@@ -1,7 +1,10 @@
 @people = @people
+page.replace_html :results, :inline => ""
+page.replace_html :map, :inline => ""
 if @people.size > 0
  page.replace_html :results, :partial => 'people/person_list', :object => @people
-elsif @map
-  page.replace_html :results, :inline => "<img src=\"http://maps.google.com/staticmap?center=#{@map.latitude},#{@map.longitude}&markers=#{@map.latitude},#{@map.longitude}&zoom=16&size=250x250&key=ABQIAAAAWeEzTbVVHIF6pbi5GNENxhTs2saUpR3PRlYMr0CCdolYdyBFARQYEHS9X5iOuf9qznh0J_h11s-U5w\"/>"
+end
+if @map
+  page.replace_html :map, :inline => "<img src=\"http://maps.google.com/staticmap?center=#{@map.latitude},#{@map.longitude}&markers=#{@map.latitude},#{@map.longitude}&zoom=16&size=250x250&key=ABQIAAAAWeEzTbVVHIF6pbi5GNENxhTs2saUpR3PRlYMr0CCdolYdyBFARQYEHS9X5iOuf9qznh0J_h11s-U5w\"/>"
 end
 

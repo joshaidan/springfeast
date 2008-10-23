@@ -1,5 +1,10 @@
 
 <div style="border: 1px solid black; padding: 10px; padding-left: 20px; margin-bottom: 20px; background-color: white;">	
+
+<table>
+<tr><td style="padding: 20px;">
+<img src="http://maps.google.com/staticmap?center=<%=@client.latitude%>,<%=@client.longitude%>&markers=<%=@client.latitude%>,<%=@client.longitude%>&zoom=16&size=250x250&key=ABQIAAAAWeEzTbVVHIF6pbi5GNENxhTs2saUpR3PRlYMr0CCdolYdyBFARQYEHS9X5iOuf9qznh0J_h11s-U5w"/>
+</td><td>
 	<h1><%= @client.address %></h1>
 
 	<table>
@@ -16,6 +21,7 @@
 			<td class="field">Phone:</td> <td><%= @client.phone %></td>
 		</td>
 	</table>
+	</td></tr></table>
 	<p><%= link_to 'Edit', edit_client_path() %></p>
 </div>
 
